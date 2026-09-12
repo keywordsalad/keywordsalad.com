@@ -1,0 +1,20 @@
+@(intent "\
+  The site's own rules, as a Vicra consumer.
+
+  Nothing here yet but the dependency: this exists first to answer whether a
+  vial outside the Velith repository can depend on Vicra by path at all.
+  ")
+module Green.Site
+  depends on {
+    Control.IO.{IO.{print_line}},
+    Vicra.Rules.{Rule, matching},
+    Vicra.Route.{unrouted, verbatim},
+  }
+  provides { main, site_rules }
+where
+
+site_rules : [Rule]
+  = [matching "robots.txt" verbatim, matching "**" unrouted]
+
+main : () -> () / {IO}
+  = \-> print_line "green-vicra: rules loaded"

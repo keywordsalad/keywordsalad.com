@@ -150,6 +150,67 @@ _verify-prerequisites () {
   stack test
 }
 
+# ── Vicra port ──────────────────────────────────────────────────────────
+#
+# The Velith/Vicra rewrite of this generator lives in `vicra/` and consumes
+# Vicra the way any third party would: a path dependency on a vial in another
+# repository, no workspace membership, no registry.
+#
+# The three `VELITH_*_PATH` variables are **required**, and this is the one
+# place that knows them. A release `velith` binary has no fallback at all; a
+# debug build falls back to `<workspace root>/vials/...` computed from the
+# *current directory*, which from this repo silently resolved to
+# `thisfieldwas.green/vials/stdlib` and failed with a confusing missing-manifest
+# error. Each points at a vial **root**, not its `src/`.
+_vicra-env() {
+  VELITH_REPO="${VELITH_REPO:-$HOME/workspace/velith-2}"
+  if [ ! -d "$VELITH_REPO/vials/stdlib" ]; then
+    echo "vicra: no Velith checkout at $VELITH_REPO" >&2
+    echo "  set VELITH_REPO to point at it" >&2
+    return 1
+  fi
+  VELITH="${VELITH:-$VELITH_REPO/target/debug/velith}"
+  if [ ! -x "$VELITH" ]; then
+    echo "vicra: no velith binary at $VELITH -- build it there with ./go build" >&2
+    return 1
+  fi
+  export VELITH_STDLIB_PATH="$VELITH_REPO/vials/stdlib"
+  export VELITH_VELDOC_PATH="$VELITH_REPO/vials/veldoc"
+  export VELITH_VICRA_TEMPLATE_PATH="$VELITH_REPO/vials/vicra-template"
+}
+
+⚡vicra-check () {
+  _help-line "Typecheck the Vicra port in vicra/"
+  _vicra-env || return 1
+  # Run from inside the vial rather than passing `--vial`: that flag needs a
+  # `[workspace]` root above it, which a standalone third-party vial has no
+  # reason to have. A bare `check` from the vial directory finds the manifest
+  # by walking up, which is what a single-vial consumer actually does.
+  ( cd vicra && "$VELITH" check )
+}
+
+⚡vicra-run () {
+  _help-line "Run the Vicra port's entry point"
+  _vicra-env || return 1
+  "$VELITH" run vicra/src/Green/Site.vl -- "$@"
+}
+
+⚡vicra-reference () {
+  _help-line "Extract the published prod reference from the _site branch into _reference/"
+  # The comparison target is the **`_site` git branch**, not the local `_site/`
+  # directory. The directory is build output that Hakyll updates in place, so
+  # switching SITE_ENV leaves it a mix -- it has been one, with `robots.txt`
+  # carrying the prod host while `atom.xml`, `rss.xml`, `sitemap.xml` and
+  # `index.html` still carried `http://localhost:8000` from a dev build. The
+  # branch is a single published prod build and records which commit produced
+  # it, so a diff against it is meaningful.
+  local ref="${1:-origin/_site}"
+  rm -rf _reference
+  mkdir -p _reference
+  git archive "$ref" | tar -x -C _reference || return 1
+  echo "vicra-reference: extracted $ref -- $(git log --format=%s -1 "$ref")"
+}
+
 ⚡datestamp () {
   _help-line "Generate ISO-8601 datestamp with time and offset"
   DATE=$(date +"%Y-%m-%dT%H:%M:%S%z")

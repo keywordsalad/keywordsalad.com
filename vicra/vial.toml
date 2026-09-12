@@ -1,0 +1,18 @@
+[package]
+name = "green-vicra"
+version = "0.1.0"
+description = "thisfieldwas.green rendered by Vicra"
+
+# Vicra is consumed the way any third party would consume it: a path
+# dependency on a vial in another repository, with no workspace membership and
+# no registry. That is the point of building the port here rather than inside
+# velith-2 -- the distribution story only gets exercised from outside.
+[dependencies]
+stdlib = { path = "../../velith-2/vials/stdlib" }
+vicra = { path = "../../velith-2/vials/vicra" }
+
+[[bin]]
+module = "Green.Site"
+
+[modules]
+provides = ["Green.Site"]
