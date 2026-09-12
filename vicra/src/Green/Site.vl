@@ -1,20 +1,95 @@
 @(intent "\
-  The site's own rules, as a Vicra consumer.
+  This site's rules, as a Vicra consumer.
 
-  Nothing here yet but the dependency: this exists first to answer whether a
-  vial outside the Velith repository can depend on Vicra by path at all.
+  Vicra is a library here, not a framework: it provides the `Build` effect, the
+  filesystem interpreter, routing and rendering, and this module supplies the
+  three things only the site knows — what to emit, where, and under what
+  configuration. The driver below is deliberately the site's own rather than
+  something Vicra exports; `Vicra`'s own module provides just `main`, which is
+  the right shape for a binary and the wrong one to depend on.
+
+  **The slice is one page on purpose.** The bar is byte-identical against what
+  Hakyll published, so a page that reproduces exactly is worth more than a site
+  that nearly does. Everything not named here is `unrouted`: not emitted, not
+  compared, and not quietly counted as passing.
   ")
 module Green.Site
   depends on {
+    Control.ExitCode.{ExitCode.{Failure, Success}},
     Control.IO.{IO.{print_line}},
-    Vicra.Rules.{Rule, matching},
+    Control.Throw.{Throw, try},
+    Data.Result.{Result.{Err, Ok}},
+    Data.Display.{Display.{display}},
+    Data.Function.{|>},
+    Data.List.{List.{::}},
+    Data.Option as Option.{Option.{Some}},
+    Vicra.Build.{Build.{emit, route_of}, BuildError, render_build_error},
+    Vicra.Build.Filesystem.{Site, run_on_disk, source_paths},
+    Vicra.Context.{SiteInfo},
+    Vicra.Identifier.{Identifier},
+    Vicra.Render.{render_item},
     Vicra.Route.{unrouted, verbatim},
+    Vicra.Rules.{Rule, matching},
   }
   provides { main, site_rules }
 where
 
+@(intent "\
+  What the site emits, first match winning — so a trailing catch-all cannot
+  swallow the rules above it.
+  ")
 site_rules : [Rule]
   = [matching "robots.txt" verbatim, matching "**" unrouted]
 
-main : () -> () / {IO}
-  = \-> print_line "green-vicra: rules loaded"
+@(intent "\
+  The site's configuration. `url` is the **prod** host, because the reference
+  this is diffed against is the published `_site` branch, which is a prod
+  build; rendering with any other host differs on every absolute URL and the
+  difference looks like a bug rather than a mismatched profile.
+  ")
+site_info : SiteInfo
+  = SiteInfo {
+    url = "https://thisfieldwas.green",
+    repo_url = "https://github.com/keywordsalad/thisfieldwas.green",
+    collections = [],
+  }
+
+main : [String] -> ExitCode / {IO}
+  = \match
+    [src, out] -> build src out
+    _          -> usage ()
+
+@(intent "A value carrying effects needs an arrow — `ExitCode / {IO}` is not a type.")
+usage : () -> ExitCode / {IO}
+  = \-> do
+    print_line "usage: green-vicra <site-dir> <out-dir>"
+    Failure 2
+
+build : String -> String -> ExitCode / {IO}
+  = \src out -> match try (\-> build_run src out) with
+    Ok n  -> do
+      print_line ("green-vicra: rendered " <> display n <> " page(s) into " <> out)
+      Success
+    Err e -> do
+      print_line ("green-vicra: " <> render_build_error e)
+      Failure 1
+
+build_run : String -> String -> Int / {IO, Throw BuildError}
+  = \src out ->
+    let site = Site { root = src, out, rules = site_rules }
+     in run_on_disk site \-> render_all (source_paths site)
+
+@(intent "\
+  The driver. Vicra keeps its own version private to its binary, which is
+  correct — a consumer's build loop is the consumer's, and this one will grow
+  differently as the port takes on layouts and collections.
+  ")
+render_all : [Identifier] -> Int / {Build, IO, Throw BuildError}
+  = \match
+    []          -> 0
+    (id :: ids) -> render_one id + render_all ids
+
+render_one : Identifier -> Int / {Build, IO, Throw BuildError}
+  = \id -> route_of id |> Option.fold 0 \to -> do
+    emit to (render_item site_info id (Some to))
+    1

@@ -195,6 +195,71 @@ _vicra-env() {
   "$VELITH" run vicra/src/Green/Site.vl -- "$@"
 }
 
+⚡vicra-source () {
+  _help-line "Stage a rename-applied worktree of main in _source/, with its history intact"
+  # `git_sha1` is `git log -1 -- <path>`: the last commit touching *that file*.
+  # Committing the snake_case rename on this branch therefore changes it for
+  # every template, and a page carrying `{{git_sha1}}` differs from the
+  # published reference by a provenance stamp rather than by anything Vicra
+  # rendered. Vicra is right and the diff is noise.
+  #
+  # So the comparison renders from a worktree of the commit the reference was
+  # built from, with the rename applied but **not committed**: a dirty tree does
+  # not change what `git log -1 -- <path>` reports. The branch keeps its
+  # committed rename for development; this is what gets diffed.
+  local at="${1:-main}"
+  rm -rf _source
+  git worktree prune
+  git worktree add -q --detach _source "$at" || return 1
+  python3 "${VELITH_REPO:-$HOME/workspace/velith-2}/scripts/rename-corpus-builtins.py" _source --apply > /dev/null || return 1
+  echo "vicra-source: staged $at ($(git -C _source log --format=%h -1)) with the rename uncommitted"
+}
+
+⚡vicra-build () {
+  _help-line "Render the staged source with Vicra into _vicra/"
+  _vicra-env || return 1
+  [ -d _source ] || ⚡vicra-source || return 1
+  rm -rf _vicra
+  mkdir -p _vicra
+  # Same reason `vicra-check` runs from inside the vial: `--vial` wants a
+  # `[workspace]` root, and a standalone consumer has none.
+  # No `--` before the arguments: in the file-path run form they follow the
+  # file directly, and `--` makes them vanish silently (main sees an empty
+  # list and prints its usage).
+  ( cd vicra && "$VELITH" run src/Green/Site.vl ../_source/site ../_vicra )
+}
+
+⚡vicra-diff () {
+  _help-line "Render with Vicra and diff every emitted page against the published reference"
+  _vicra-env || return 1
+  [ -d _reference ] || ⚡vicra-reference || return 1
+  ⚡vicra-build || return 1
+  # Compare only what the slice emits. Diffing the whole tree would report
+  # every page not yet ported as a failure, which says nothing and buries the
+  # one thing this asserts.
+  local status=0 compared=0 f rel
+  while read -r f; do
+    [ -z "$f" ] && continue
+    rel="${f#_vicra/}"
+    compared=$((compared + 1))
+    if [ ! -f "_reference/$rel" ]; then
+      echo "  NO REFERENCE: $rel" >&2
+      status=1
+    elif ! diff -u "_reference/$rel" "$f"; then
+      echo "  DIFFERS: $rel" >&2
+      status=1
+    fi
+  done <<< "$(find _vicra -type f | sort)"
+  if [ "$compared" -eq 0 ]; then
+    echo "vicra-diff: rendered nothing -- the slice is empty" >&2
+    return 1
+  fi
+  if [ "$status" -eq 0 ]; then
+    echo "vicra-diff: $compared page(s) byte-identical to the published build"
+  fi
+  return $status
+}
+
 ⚡vicra-reference () {
   _help-line "Extract the published prod reference from the _site branch into _reference/"
   # The comparison target is the **`_site` git branch**, not the local `_site/`
