@@ -11,9 +11,9 @@ preloadImages:
 <aside class="meatball-headshot">
   <div class="aside-content">
     <picture>
-      <source srcset="{{getUrl 'images/about-me/headshot-w-meatball-doge_400w.png' | asWebp}}" type="image/webp">
+      <source srcset="{{get_url 'images/about-me/headshot-w-meatball-doge_400w.png' | as_webp}}" type="image/webp">
       <img width="288" height="384"
-        src="{{getUrl 'images/about-me/headshot-w-meatball-doge_400w.png'}}"
+        src="{{get_url 'images/about-me/headshot-w-meatball-doge_400w.png'}}"
         title="Myself and Meatball. He's cute cuz he's little."
         alt="Mysql and Meatball">
     </picture>
@@ -28,11 +28,11 @@ preloadImages:
 </p>
 
 <h2>I blog when I can</h2>
-<p>Here's a sampling of things I've blogged about. A complete selection may be found on their <a href="{{getUrl 'blog.html'}}">dedicated page</a>.</p>
+<p>Here's a sampling of things I've blogged about. A complete selection may be found on their <a href="{{get_url 'blog.html'}}">dedicated page</a>.</p>
 <ul>
   {{#for recentPosts}}
   <li>
-    <a href="{{url}}">{{title}}</a> - {{published | dateAs shortDate}}
+    <a href="{{url}}">{{title}}</a> - {{published | date_as short_date}}
   </li>
   {{#end}}
 </ul>
@@ -131,9 +131,9 @@ preloadImages:
 <aside class="meatball-jellybean">
   <div class="aside-content">
     <picture>
-      <source srcset="{{getUrl 'images/about-me/meatball-n-jelly-doges_400w.png' | asWebp}}" type="image/webp">
+      <source srcset="{{get_url 'images/about-me/meatball-n-jelly-doges_400w.png' | as_webp}}" type="image/webp">
       <img width="200" height="266" loading="lazy"
-        src="{{getUrl 'images/about-me/meatball-n-jelly-doges_400w.png'}}"
+        src="{{get_url 'images/about-me/meatball-n-jelly-doges_400w.png'}}"
         title="Meatball is the little one, Jellybean is the big one."
         alt="Meatball and Jellybean">
     </picture>

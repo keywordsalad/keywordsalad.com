@@ -34,6 +34,7 @@ target/
 _site/
 _test/
 gh-pages/
+vial.lock
 
 # Prod reference extracted from the _site branch by `./go vicra-reference`,
 # for diffing the Vicra port against the published Hakyll output.

@@ -1,17 +1,17 @@
 <div class="post-meta">
   <p class="post-published">
-    {{#if isPublished-}}
-      Posted on {{published | dateAs shortDate}}
+    {{#if is_published-}}
+      Posted on {{published | date_as short_date}}
     {{#else-}}
-      Drafted on {{date | dateAs shortDate}}
+      Drafted on {{date | date_as short_date}}
     {{#end-}}
     {{#if author-}}
       by {{author}}
     {{#end-}}
   </p>
-  {{#if isUpdated-}}
+  {{#if is_updated-}}
     <p class="post-updated">
-      Last updated on {{updated | dateAs shortDate}}
+      Last updated on {{updated | date_as short_date}}
     </p>
   {{#end-}}
   {{#if tags-}}

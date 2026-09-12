@@ -13,7 +13,7 @@ stylesheets:
   - css/posts/reasons-why-i-love-claude.scss
 ---
 
-A few years ago I wrote {{linkedTitle "_posts/2021-12-11-reasons-why-my-website-is-offline.md"}}, in which I put on my tinfoil hat and pulled my whole website into the closet rather than let Copilot anywhere near my code. I was a principled curmudgeon about AI, and honestly? I stand by past me. He had reasons.
+A few years ago I wrote {{linked_title "_posts/2021-12-11-reasons-why-my-website-is-offline.md"}}, in which I put on my tinfoil hat and pulled my whole website into the closet rather than let Copilot anywhere near my code. I was a principled curmudgeon about AI, and honestly? I stand by past me. He had reasons.
 
 <!--more-->
 

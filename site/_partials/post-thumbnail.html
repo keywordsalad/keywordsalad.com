@@ -2,8 +2,8 @@
 <div class="post-thumbnail">
   <a href="{{thumbnail}}">
     <picture>
-      {{#if (thumbnail | asWebp)-}}
-      <source srcset="{{thumbnail | asWebp}}" type="image/webp">
+      {{#if (thumbnail | as_webp)-}}
+      <source srcset="{{thumbnail | as_webp}}" type="image/webp">
       {{-#end}}
       <img src="{{thumbnail}}" alt="{{title}}" width="128" height="128" loading="lazy">
     </picture>

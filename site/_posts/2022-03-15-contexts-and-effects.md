@@ -27,8 +27,8 @@ Have you ever received an unexpected `null` reference? Have you ever written a f
 > **This post is part of a series:**
 >
 > 1. **{{title}}**
-> 2. {{linkedTitle "_posts/2022-06-05-enabling-control-flow.md"}}
-> 3. {{linkedTitle "_posts/2022-06-17-imperative-computation.md"}}
+> 2. {{linked_title "_posts/2022-06-05-enabling-control-flow.md"}}
+> 3. {{linked_title "_posts/2022-06-17-imperative-computation.md"}}
 
 _The code that accompanies this post may be found [here]({{code_repo}} "Accompanying code repository")._
 
@@ -618,10 +618,10 @@ Functors thus _preserve structure_ by keeping operations within the context. For
 
 :::{#functor-diagrams}
 {{imageFigure id: "img-list-functor",
-              src: getUrl "images/embracing-nondeterminism/list-functor-512x512.png",
+              src: get_url "images/embracing-nondeterminism/list-functor-512x512.png",
               title: "Applying <code>map</code> to a <code>List[Int]</code>."}}
 {{imageFigure id: "img-tree-functor",
-              src: getUrl "images/embracing-nondeterminism/binary-tree-functor-1024x340.png",
+              src: get_url "images/embracing-nondeterminism/binary-tree-functor-1024x340.png",
               title: "Applying <code>map</code> to a <code>BinaryTree[Int]</code>."}}
 :::
 
@@ -916,7 +916,7 @@ def combine(a: A, b: B): C
 
 How do you apply `combine()` to the terms `A` and `B` produced by the contexts? What happens if one of the contexts is in an **undesired case**? At first blush it appears that `map()` might work, but `combine()` takes two arguments. You need a specialized functor in order to apply `combine()`!
 
-In my next post {{linkedTitle "_posts/2022-06-05-enabling-control-flow.md"}}, we will explore how **applicatives** enable working within two or more contexts at the same time, as well as the many ways that you will be able to exploit this capability in your programs to express control flow.
+In my next post {{linked_title "_posts/2022-06-05-enabling-control-flow.md"}}, we will explore how **applicatives** enable working within two or more contexts at the same time, as well as the many ways that you will be able to exploit this capability in your programs to express control flow.
 
 > **Acknowledgements**
 >

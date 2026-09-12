@@ -1,34 +1,34 @@
-<meta property="og:site_name" content="{{og.siteTitle | default siteTitle | escapeHtml}}">
+<meta property="og:site_name" content="{{og.siteTitle | default siteTitle | escape_html}}">
 <meta property="og:type" content="{{#if article}}article{{#else}}website{{#end}}">
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="{{og.title | default title | default siteTitle | escapeHtml}}">
-<meta property="og:url" content="{{siteUrl}}{{og.url | default url | escapeHtmlUri}}">
-<meta property="og:description" content="{{og.description | default description | default siteDescription | escapeHtml}}">
-<meta property="og:image" content="{{siteUrl}}{{og.image.url | default '/images/grass-1024x1024.png' | escapeHtmlUri}}">
+<meta property="og:title" content="{{og.title | default title | default siteTitle | escape_html}}">
+<meta property="og:url" content="{{site_url}}{{og.url | default url | escape_html_uri}}">
+<meta property="og:description" content="{{og.description | default description | default siteDescription | escape_html}}">
+<meta property="og:image" content="{{site_url}}{{og.image.url | default '/images/grass-1024x1024.png' | escape_html_uri}}">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1024">
 <meta property="og:image:type" content="image/png">
 {{#if og.image.alt-}}
-  <meta property="og:image:alt" content="{{og.image.alt | escapeHtml}}">
+  <meta property="og:image:alt" content="{{og.image.alt | escape_html}}">
 {{-#end}}
 {{#if article-}}
   {{#if published-}}
-    <meta property="article:published_time" content="{{published | dateAs robotTime}}">
+    <meta property="article:published_time" content="{{published | date_as robot_time}}">
   {{-#end}}
   {{#if updated-}}
-    <meta property="article:modified_time" content="{{updated | dateAs robotTime}}">
+    <meta property="article:modified_time" content="{{updated | date_as robot_time}}">
   {{-#end}}
   {{#if author-}}
-    <meta property="article:author" content="{{author | escapeHtml}}">
+    <meta property="article:author" content="{{author | escape_html}}">
   {{-#end}}
   {{#for tagList-}}
-    <meta property="article:tag" content="{{item | escapeHtml}}">
+    <meta property="article:tag" content="{{item | escape_html}}">
   {{#end}}
 {{-#end}}
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="{{og.title | default title | default siteTitle | escapeHtml}}">
-<meta name="twitter:description" content="{{og.description | default description | default siteDescription | escapeHtml}}">
-<meta name="twitter:image" content="{{siteUrl}}{{og.image.url | default '/images/grass-1024x1024.png' | escapeHtmlUri}}">
+<meta name="twitter:title" content="{{og.title | default title | default siteTitle | escape_html}}">
+<meta name="twitter:description" content="{{og.description | default description | default siteDescription | escape_html}}">
+<meta name="twitter:image" content="{{site_url}}{{og.image.url | default '/images/grass-1024x1024.png' | escape_html_uri}}">
 {{#if og.image.alt-}}
-  <meta name="twitter:image:alt" content="{{og.image.alt | escapeHtml}}">
+  <meta name="twitter:image:alt" content="{{og.image.alt | escape_html}}">
 {{-#end}}

@@ -2,7 +2,7 @@
 <div class="video-container">
   <iframe src="https://www.youtube.com/embed/{{video}}"
     {{#if title-}}
-      title="{{title | escapeHtml}}"
+      title="{{title | escape_html}}"
     {{#else-}}
       title="YouTube video player"
     {{#end}}

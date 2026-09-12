@@ -282,9 +282,9 @@ I had never written professionally before or been aware of configuration managem
 
 The other posts in this series were also written with guidance from Paul:
 
-- {{linkedTitle "_posts/2012-11-16-scm-backed-application-configuration-with-perforce.md"}}
-- {{linkedTitle "_posts/2012-11-20-app-config-app-in-action.md"}}
-- {{linkedTitle "_posts/2012-11-28-promoting-changes-with-app-config-app.md"}}
+- {{linked_title "_posts/2012-11-16-scm-backed-application-configuration-with-perforce.md"}}
+- {{linked_title "_posts/2012-11-20-app-config-app-in-action.md"}}
+- {{linked_title "_posts/2012-11-28-promoting-changes-with-app-config-app.md"}}
 
 The subject of configuration as described in these posts is still fresh even after nearly ten years. Even now configuration as code still doesn't have a perfect solution, though products have become available that make managing configuration easier. Changing configuration in a running process as a general solution remains elusive, as supporting it imposes a lot of constraints on design.
 

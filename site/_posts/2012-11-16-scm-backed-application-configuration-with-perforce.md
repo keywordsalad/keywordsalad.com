@@ -175,7 +175,7 @@ existing infrastructure.
 The reason I point out Subversion and TFS is largely due to support of
 per-branch permissions.
 
-[last post]: {{getUrl '_posts/2012-11-07-using-perforce-chronicle-for-application-configuration.md'}}
+[last post]: {{get_url '_posts/2012-11-07-using-perforce-chronicle-for-application-configuration.md'}}
 [forked]: https://github.com/lmcgrath/App-Config-App/
 [AngularJS]: http://angularjs.org/
 [App-Config-App's README]: https://github.com/lmcgrath/app-config-app/blob/master/README.md

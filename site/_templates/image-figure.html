@@ -2,8 +2,8 @@
 <div class="aside-content">
   <p class="content">
     <a href="{{src}}" class="image-link">
-      <picture>{{#if (src | asWebp)}}
-      <source srcset="{{src | asWebp}}" type="image/webp">{{#end}}
+      <picture>{{#if (src | as_webp)}}
+      <source srcset="{{src | as_webp}}" type="image/webp">{{#end}}
       <img src="{{src}}"{{#if id}} id="{{id}}-img"{{#end-}} loading="lazy"
                         {{#if title}} title="{{title}}"{{#end-}}
                         {{#if (alt | default title)}} alt="{{alt | default title}}"{{#end-}}

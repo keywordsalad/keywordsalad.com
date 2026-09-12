@@ -6,34 +6,34 @@ changefreq: weekly
   xmlns:atom="http://www.w3.org/2005/Atom"
   xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel>
-  <title>{{siteTitle | escapeHtml}}</title>
-  <description>{{siteDescription | escapeHtml}}</description>
-  <link>{{siteUrl}}</link>
-  <atom:link href="{{absUrl | escapeHtmlUri}}" rel="self" type="application/rss+xml" />
+  <title>{{siteTitle | escape_html}}</title>
+  <description>{{siteDescription | escape_html}}</description>
+  <link>{{site_url}}</link>
+  <atom:link href="{{abs_url | escape_html_uri}}" rel="self" type="application/rss+xml" />
   <image>
-    <url>{{siteUrl}}/images/grass-256x256.png</url>
+    <url>{{site_url}}/images/grass-256x256.png</url>
     <title>{{siteTitle}}</title>
-    <link>{{siteUrl}}</link>
+    <link>{{site_url}}</link>
   </image>
   <category>Technology</category>
   <category>Software Engineering</category>
   <language>en-US</language>
-  <managingEditor>{{authorEmail | escapeHtml}} ({{authorName | escapeHtml}})</managingEditor>
-  <webMaster>{{authorEmail | escapeHtml}} ({{authorName | escapeHtml}})</webMaster>
-  <pubDate>{{lastPublished | dateAs rfc822}}</pubDate>
-  <lastBuildDate>{{lastUpdated | dateAs rfc822}}</lastBuildDate>
+  <managingEditor>{{authorEmail | escape_html}} ({{authorName | escape_html}})</managingEditor>
+  <webMaster>{{authorEmail | escape_html}} ({{authorName | escape_html}})</webMaster>
+  <pubDate>{{lastPublished | date_as rfc822}}</pubDate>
+  <lastBuildDate>{{lastUpdated | date_as rfc822}}</lastBuildDate>
   <generator>Hakyll</generator>
-  <copyright>Copyright &#169; 2012-{{currentTime | dateAs '%Y'}} Logan McGrath. All rights reserved.</copyright>
+  <copyright>Copyright &#169; 2012-{{currentTime | date_as '%Y'}} Logan McGrath. All rights reserved.</copyright>
   {{#for posts-}}
     <item>
-      <title>{{title | escapeHtml}}</title>
-      <description>{{description | escapeHtml}}</description>
-      <dc:creator>{{author | escapeHtml}}</dc:creator>
-      <link>{{absUrl | escapeHtml}}</link>
-      <guid>{{absUrl | escapeHtml}}</guid>
-      <pubDate>{{published | dateAs rfc822}}</pubDate>
+      <title>{{title | escape_html}}</title>
+      <description>{{description | escape_html}}</description>
+      <dc:creator>{{author | escape_html}}</dc:creator>
+      <link>{{abs_url | escape_html}}</link>
+      <guid>{{abs_url | escape_html}}</guid>
+      <pubDate>{{published | date_as rfc822}}</pubDate>
       {{#for tagList-}}
-      <category>{{item | escapeHtml}}</category>
+      <category>{{item | escape_html}}</category>
       {{#end-}}
     </item>
   {{#end-}}

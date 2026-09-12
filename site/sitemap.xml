@@ -7,12 +7,12 @@
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     {{-#for pages}}
     <url>
-        <loc>{{absUrl | escapeHtmlUri}}</loc>
+        <loc>{{abs_url | escape_html_uri}}</loc>
         <lastmod>{{
             updated
                 | default date
                 | default currentTime
-                | dateAs robotTime
+                | date_as robot_time
             }}</lastmod>
         <changefreq>{{changefreq | default "monthly"}}</changefreq>
         <priority>{{priority | default 0.8}}</priority>

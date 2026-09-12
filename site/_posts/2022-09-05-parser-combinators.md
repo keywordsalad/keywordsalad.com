@@ -10,7 +10,7 @@ comments: true
 code_repo: https://github.com/keywordsalad/parser-combinators/tree/post/parser-combinators
 ---
 
-In my post {{linkedTitle "_posts/2022-06-16-set-function.md"}} I introduced function combinators as a pattern for building complex logic. I added the caveat that combinators should not be used to define sets, which I feel undersells the value of combinators as a general programming pattern. In this post we will explore combinators as an applied solution to a common problem: _parsing text_.
+In my post {{linked_title "_posts/2022-06-16-set-function.md"}} I introduced function combinators as a pattern for building complex logic. I added the caveat that combinators should not be used to define sets, which I feel undersells the value of combinators as a general programming pattern. In this post we will explore combinators as an applied solution to a common problem: _parsing text_.
 
 <!--more-->
 
@@ -276,7 +276,7 @@ _**But before we use it this means that all of our function signatures have to c
 
 Our `parse()` function will soon become generic its return type, which makes it _covariant_ in that `parse()` can be adapted to produce anything we want. What the `parse()` function produces is contextualized by whether it is recognized in the input, and as such there is a chance that nothing is produced because the input wasn't recognized. This means the the `parse()` function forms a specific structure: a _context_ with the shape of a **functor**.
 
-> I have written about contexts, functors, and related structures extensively. Start from the following article if these terms are unfamiliar to you: **{{linkedTitle "_posts/2022-03-15-contexts-and-effects.md"}}**
+> I have written about contexts, functors, and related structures extensively. Start from the following article if these terms are unfamiliar to you: **{{linked_title "_posts/2022-03-15-contexts-and-effects.md"}}**
 
 Take a look at what the `parse()` function signature will look like after we start using `ParseResult`:
 

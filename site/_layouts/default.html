@@ -1,4 +1,4 @@
-{{@applyLayout "skeleton"}}
+{{@apply_layout "skeleton"}}
 <header class="page-header">
   <div class="content-bound">
     <div class="logo-icon grass-icon"><a href="/" tabindex="-1" title="This Field Was Green"></a></div>
@@ -27,10 +27,10 @@
       <li><a href="https://www.flaticon.com/free-icon/grass_2790190">Icon</a> made by <a href="https://www.flaticon.com/authors/good-ware">Good Ware</a> from <a href="https://www.flaticon.com/">Flaticon</a>.</li>
     </ul>
     <p class="generated">This page was rendered from
-      {{-#if gitFileName}} <a href="{{gitWebUrl}}/blob/{{gitSha1}}/{{gitFilePath}}">{{gitFileName}}</a>
+      {{-#if git_file_name}} <a href="{{git_web_url}}/blob/{{git_sha1}}/{{git_file_path}}">{{git_file_name}}</a>
       {{-#else}} derived data
-      {{-#end}} at commit <a class="commit-link" href="{{gitWebUrl}}/commit/{{gitSha1}}">{{gitSha1}}</a>
-      {{-#if isChanged}} with local changes{{#end-}}
+      {{-#end}} at commit <a class="commit-link" href="{{git_web_url}}/commit/{{git_sha1}}">{{git_sha1}}</a>
+      {{-#if is_changed}} with local changes{{#end-}}
       .</p>
   </div>
 </footer>

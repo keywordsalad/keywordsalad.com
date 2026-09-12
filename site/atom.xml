@@ -3,31 +3,31 @@ changefreq: weekly
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>{{siteUrl}}</id>
-  <title>{{siteTitle | escapeHtml}}</title>
-  <subtitle>{{siteDescription | escapeHtml}}</subtitle>
-  <icon>{{siteUrl}}/images/grass-256x256.png</icon>
-  <link href="{{siteUrl | escapeHtmlUri}}" />
-  <link rel="self" href="{{absUrl | escapeHtmlUri}}" />
+  <id>{{site_url}}</id>
+  <title>{{siteTitle | escape_html}}</title>
+  <subtitle>{{siteDescription | escape_html}}</subtitle>
+  <icon>{{site_url}}/images/grass-256x256.png</icon>
+  <link href="{{site_url | escape_html_uri}}" />
+  <link rel="self" href="{{abs_url | escape_html_uri}}" />
   <updated>{{lastUpdated}}</updated>
   <author>
-    <name>{{authorName | escapeHtml}}</name>
-    <email>{{authorEmail | escapeHtml}}</email>
+    <name>{{authorName | escape_html}}</name>
+    <email>{{authorEmail | escape_html}}</email>
   </author>
-  <rights>Copyright &#169; 2012-{{currentTime | dateAs '%Y'}} Logan McGrath. All rights reserved.</rights>
+  <rights>Copyright &#169; 2012-{{currentTime | date_as '%Y'}} Logan McGrath. All rights reserved.</rights>
   <generator uri="https://jaspervdj.be/hakyll/">Hakyll</generator>
   {{#for posts-}}
     <entry>
-      <id>{{absUrl | escapeHtmlUri}}</id>
-      <title>{{title | escapeHtml}}</title>
-      <updated>{{updated | dateAs robotTime}}</updated>
-      <link rel="alternate" href="{{absUrl | escapeHtmlUri}}" />
-      <summary type="html">{{teaser | escapeHtml}}</summary>
+      <id>{{abs_url | escape_html_uri}}</id>
+      <title>{{title | escape_html}}</title>
+      <updated>{{updated | date_as robot_time}}</updated>
+      <link rel="alternate" href="{{abs_url | escape_html_uri}}" />
+      <summary type="html">{{teaser | escape_html}}</summary>
       <author>
-        <name>{{author | escapeHtml}}</name>
-        {{#if email}}<email>{{email | escapeHtml}}</email>{{#end-}}
+        <name>{{author | escape_html}}</name>
+        {{#if email}}<email>{{email | escape_html}}</email>{{#end-}}
       </author>
-      <content type="html">{{body | escapeHtml}}</content>
+      <content type="html">{{body | escape_html}}</content>
     </entry>
   {{#end-}}
 </feed>

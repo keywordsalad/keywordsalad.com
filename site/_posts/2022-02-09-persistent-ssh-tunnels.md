@@ -14,7 +14,7 @@ og:
     alt: I duct-taped my ssh tunnels open!
 ---
 
-In my previous post, {{linkedTitle "_posts/2021-12-11-reasons-why-my-website-is-offline.md"}}, I complained about `systemd` giving up when it fails to maintain `ssh` tunnels. In this post, I complain about `systemd` a bit more and how I gave up and stopped using it for managing my `ssh` tunnels.
+In my previous post, {{linked_title "_posts/2021-12-11-reasons-why-my-website-is-offline.md"}}, I complained about `systemd` giving up when it fails to maintain `ssh` tunnels. In this post, I complain about `systemd` a bit more and how I gave up and stopped using it for managing my `ssh` tunnels.
 
 <!--more-->
 

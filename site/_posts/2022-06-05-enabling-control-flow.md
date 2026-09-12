@@ -15,15 +15,15 @@ og:
 code_repo: https://github.com/keywordsalad/embracing-nondeterminism-code/tree/part2
 ---
 
-Remember **functors**? Recall from my last post, {{linkedTitle "_posts/2022-03-15-contexts-and-effects.md"}}, they are structures that abstract away complexity imposed by nondeterminism present in **contexts** that produce some output; contexts such as optionality, network interaction, or validation. When contexts fail to produce some output, they are in their **undesired case** and no computation may be performed against them. In this post we will explore how to exploit this characteristic to halt computation in order to express control flow.
+Remember **functors**? Recall from my last post, {{linked_title "_posts/2022-03-15-contexts-and-effects.md"}}, they are structures that abstract away complexity imposed by nondeterminism present in **contexts** that produce some output; contexts such as optionality, network interaction, or validation. When contexts fail to produce some output, they are in their **undesired case** and no computation may be performed against them. In this post we will explore how to exploit this characteristic to halt computation in order to express control flow.
 
 <!--more-->
 
 > **This post is part of a series:**
 >
-> 1. {{linkedTitle "_posts/2022-03-15-contexts-and-effects.md"}}
+> 1. {{linked_title "_posts/2022-03-15-contexts-and-effects.md"}}
 > 2. **{{title}}**
-> 3. {{linkedTitle "_posts/2022-06-17-imperative-computation.md"}}
+> 3. {{linked_title "_posts/2022-06-17-imperative-computation.md"}}
 
 _The code that accompanies this post may be found [here]({{code_repo}} "Accompanying code repository")._
 
@@ -943,6 +943,6 @@ When all inputs to an applicative function are in the **desired case**, then the
 
 Independent computation provides some level of control flow, but it doesn't guide execution to proceed only if the previous execution has succeeded, as all operations evaluate independently of each other. Applicatives therefore do not provide a mechanism to support imperative programming. For this kind of control flow, you need to further specialize the applicative functor.
 
-In my next post {{linkedTitle "_posts/2022-06-17-imperative-computation.md"}} we will explore the infamous _**monad**_ and how it enables imperative control flow in functional programming.
+In my next post {{linked_title "_posts/2022-06-17-imperative-computation.md"}} we will explore the infamous _**monad**_ and how it enables imperative control flow in functional programming.
 
 [category theory]: https://en.m.wikipedia.org/wiki/Category_theory

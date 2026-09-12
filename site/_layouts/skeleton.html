@@ -11,14 +11,14 @@
 {{#end-}}
 <meta name="google-site-verification" content="xhJhOHXKb-sdapo1BtUE55gj5Oh_mm0qzlqAqaqjXLU" />
 
-<meta name="description" content="{{description | default siteDescription | escapeHtml}}" />
-<meta name="author" content="{{author | escapeHtml}}" />
+<meta name="description" content="{{description | default siteDescription | escape_html}}" />
+<meta name="author" content="{{author | escape_html}}" />
 <title>{{#if title}}{{title}} - {{#end}}{{siteTitle}}</title>
-<link rel="canonical" href="{{absUrl}}" />
-<link rel="shortcut icon" sizes="16x16 32x32 48x48 64x64 96x96 128x128 256x256" href="{{siteUrl}}/favicon.ico" />
+<link rel="canonical" href="{{abs_url}}" />
+<link rel="shortcut icon" sizes="16x16 32x32 48x48 64x64 96x96 128x128 256x256" href="{{site_url}}/favicon.ico" />
 <link rel="me" href="{{mastodonProfile}}" />
-<link rel="alternate" type="application/atom+xml" title="{{siteTitle}} — Atom" href="{{siteUrl}}/atom.xml" />
-<link rel="alternate" type="application/rss+xml" title="{{siteTitle}} — RSS" href="{{siteUrl}}/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="{{siteTitle}} — Atom" href="{{site_url}}/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="{{siteTitle}} — RSS" href="{{site_url}}/rss.xml" />
 
 {{#if useSocial-}}
   {{-partial "social/open-graph"-}}
@@ -26,7 +26,7 @@
 {{-#end-}}
 
 {{#for preloadImages-}}
-<link rel="preload" as="image" fetchpriority="high" href="{{getUrl item}}"{{#if (getUrl item | asWebp)}} imagesrcset="{{getUrl item | asWebp}}" type="image/webp"{{#end}} />
+<link rel="preload" as="image" fetchpriority="high" href="{{get_url item}}"{{#if (get_url item | as_webp)}} imagesrcset="{{get_url item | as_webp}}" type="image/webp"{{#end}} />
 {{#end-}}
 
 <link rel="stylesheet" href="/css/main.css" />
@@ -34,7 +34,7 @@
 <style>{{ inlineStylesheet item }}</style>
 {{-#end-}}
 
-<script src="{{getUrl 'js/main.js'}}" async></script>
+<script src="{{get_url 'js/main.js'}}" async></script>
 {{partial "scroll-shadows"}}
 
 </head>

@@ -4,39 +4,39 @@
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "{{siteUrl}}/#website",
-      "url": "{{siteUrl | escapeJson}}",
-      "name": "{{siteTitle | escapeJson}}",
-      "description": "{{description | default siteDescription | escapeJson}}",
+      "@id": "{{site_url}}/#website",
+      "url": "{{site_url | escape_json}}",
+      "name": "{{siteTitle | escape_json}}",
+      "description": "{{description | default siteDescription | escape_json}}",
       "inLanguage": "en-US",
-      "publisher": { "@id": "{{siteUrl}}/#person" }
+      "publisher": { "@id": "{{site_url}}/#person" }
     },
     {
       "@type": "Person",
-      "@id": "{{siteUrl}}/#person",
-      "name": "{{authorName | escapeJson}}",
-      "email": "{{authorEmail | escapeJson}}",
-      "url": "{{siteUrl | escapeJson}}",
+      "@id": "{{site_url}}/#person",
+      "name": "{{authorName | escape_json}}",
+      "email": "{{authorEmail | escape_json}}",
+      "url": "{{site_url | escape_json}}",
       "sameAs": [
-        "{{linkedInProfile | escapeJson}}",
-        "{{githubProfile | escapeJson}}",
-        "{{mastodonProfile | escapeJson}}"
+        "{{linkedInProfile | escape_json}}",
+        "{{githubProfile | escape_json}}",
+        "{{mastodonProfile | escape_json}}"
       ]
     }{{#if published-}},
     {
       "@type": "BlogPosting",
-      "@id": "{{absUrl}}#article",
-      "mainEntityOfPage": "{{absUrl | escapeJson}}",
-      "url": "{{absUrl | escapeJson}}",
-      "headline": "{{title | default siteTitle | escapeJson}}",
-      "description": "{{description | default siteDescription | escapeJson}}",
-      "image": "{{siteUrl}}{{og.image.url | default '/images/grass-1024x1024.png' | escapeJson}}",
-      "datePublished": "{{published | dateAs robotTime}}",
-      "dateModified": "{{updated | dateAs robotTime}}",
+      "@id": "{{abs_url}}#article",
+      "mainEntityOfPage": "{{abs_url | escape_json}}",
+      "url": "{{abs_url | escape_json}}",
+      "headline": "{{title | default siteTitle | escape_json}}",
+      "description": "{{description | default siteDescription | escape_json}}",
+      "image": "{{site_url}}{{og.image.url | default '/images/grass-1024x1024.png' | escape_json}}",
+      "datePublished": "{{published | date_as robot_time}}",
+      "dateModified": "{{updated | date_as robot_time}}",
       "inLanguage": "en-US",
-      "keywords": "{{#for tagList-}}{{item | escapeJson}}, {{-#end}}",
-      "author": { "@id": "{{siteUrl}}/#person" },
-      "publisher": { "@id": "{{siteUrl}}/#person" }
+      "keywords": "{{#for tagList-}}{{item | escape_json}}, {{-#end}}",
+      "author": { "@id": "{{site_url}}/#person" },
+      "publisher": { "@id": "{{site_url}}/#person" }
     }{{-#end}}
   ]
 }

@@ -1,8 +1,8 @@
-# Generated from commit {{gitSha1}}
+# Generated from commit {{git_sha1}}
 User-agent: *
 Disallow: /drafts
 Disallow: /drafts/*
-Sitemap: {{siteUrl}}/sitemap.xml
+Sitemap: {{site_url}}/sitemap.xml
 
 User-agent: CCBot
 Disallow: /
