@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>https://thisfieldwas.green</id>
+  <id>https://keywordsalad.com</id>
   <title>This Field Was Green</title>
   <subtitle>I keep my field green by writing about tech and sometimes life.</subtitle>
-  <icon>https://thisfieldwas.green/images/grass-256x256.png</icon>
-  <link href="https://thisfieldwas.green" />
-  <link rel="self" href="https://thisfieldwas.green/atom.xml" />
+  <icon>https://keywordsalad.com/images/grass-256x256.png</icon>
+  <link href="https://keywordsalad.com" />
+  <link rel="self" href="https://keywordsalad.com/atom.xml" />
   <updated>2026-07-14T21:56:10-04:00</updated>
   <author>
     <name>Logan McGrath</name>
-    <email>logan.mcgrath@thisfieldwas.green</email>
+    <email>logan.mcgrath@keywordsalad.com</email>
   </author>
   <rights>Copyright &#169; 2012-2026 Logan McGrath. All rights reserved.</rights>
   <generator uri="https://jaspervdj.be/hakyll/">Hakyll</generator>
   <entry>
-      <id>https://thisfieldwas.green/blog/2026/07/14/reasons-why-i-love-claude/</id>
+      <id>https://keywordsalad.com/blog/2026/07/14/reasons-why-i-love-claude/</id>
       <title>Reasons why I love Claude 💅</title>
       <updated>2026-07-14T21:56:10-04:00</updated>
-      <link rel="alternate" href="https://thisfieldwas.green/blog/2026/07/14/reasons-why-i-love-claude/" />
+      <link rel="alternate" href="https://keywordsalad.com/blog/2026/07/14/reasons-why-i-love-claude/" />
       <summary type="html">&lt;div class=&quot;estimated-reading-time&quot;&gt;
 &lt;p&gt;Estimated reading time: &lt;span class=&quot;length&quot;&gt;7m 12s&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -120,12 +120,12 @@ all tracks.&lt;/p&gt;
 &lt;/section&gt;</content>
     </entry>
   <entry>
-      <id>https://thisfieldwas.green/blog/2022/09/05/parser-combinators/</id>
+      <id>https://keywordsalad.com/blog/2022/09/05/parser-combinators/</id>
       <title>Parser Combinators</title>
       <updated>2022-09-05T12:55:18-07:00</updated>
-      <link rel="alternate" href="https://thisfieldwas.green/blog/2022/09/05/parser-combinators/" />
+      <link rel="alternate" href="https://keywordsalad.com/blog/2022/09/05/parser-combinators/" />
       <summary type="html">&lt;div class=&quot;estimated-reading-time&quot;&gt;
-&lt;p&gt;Estimated reading time: &lt;span class=&quot;length&quot;&gt;1h 10m 1s&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Estimated reading time: &lt;span class=&quot;length&quot;&gt;1h 10m 0s&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;In my post &lt;a href=&quot;/blog/2022/06/16/set-function/&quot; title=&quot;The Set Function&quot;&gt;The Set Function&lt;/a&gt; I introduced function combinators as a pattern for building complex logic. I added the caveat that combinators should not be used to define sets, which I feel undersells the value of combinators as a general programming pattern. In this post we will explore combinators as an applied solution to a common problem: &lt;em&gt;parsing text&lt;/em&gt;.&lt;/p&gt;
 </summary>
@@ -133,7 +133,7 @@ all tracks.&lt;/p&gt;
         <name>Logan McGrath</name>
         </author>
       <content type="html">&lt;div class=&quot;estimated-reading-time&quot;&gt;
-&lt;p&gt;Estimated reading time: &lt;span class=&quot;length&quot;&gt;1h 10m 1s&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Estimated reading time: &lt;span class=&quot;length&quot;&gt;1h 10m 0s&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;In my post &lt;a href=&quot;/blog/2022/06/16/set-function/&quot; title=&quot;The Set Function&quot;&gt;The Set Function&lt;/a&gt; I introduced function combinators as a pattern for building complex logic. I added the caveat that combinators should not be used to define sets, which I feel undersells the value of combinators as a general programming pattern. In this post we will explore combinators as an applied solution to a common problem: &lt;em&gt;parsing text&lt;/em&gt;.&lt;/p&gt;
 &lt;!--more--&gt;
@@ -437,7 +437,7 @@ all tracks.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Notice that we no longer need to manually pass around the input cursor. We’ve simply folded a sequence of &lt;code&gt;parse()&lt;/code&gt; functions to &lt;code&gt;Char&lt;/code&gt; down to a single &lt;code&gt;parse()&lt;/code&gt; function to &lt;code&gt;String&lt;/code&gt;. The functor abstraction allowed us to declaratively create this function without having to worry about the plumbing; we don’t even have to declare the cursor as an explicit input.&lt;/p&gt;
 &lt;h3 id=&quot;sequential-parsing-with-the-parse-function&quot;&gt;Sequential parsing with the &lt;code&gt;parse()&lt;/code&gt; function&lt;/h3&gt;
-&lt;p&gt;We can’t apply the functor abstraction to the &lt;code&gt;&amp;amp;&lt;/code&gt; combinator as it sequences one &lt;code&gt;parse()&lt;/code&gt; function after a successful application of a preceding &lt;code&gt;parse()&lt;/code&gt; function. This means that it executes &lt;em&gt;imperatively&lt;/em&gt;. The specific abstraction we have to use for this kind of execution is a &lt;strong&gt;&lt;a href=&quot;https://thisfieldwas.green/blog/2022/06/17/imperative-computation/&quot;&gt;monad&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;We can’t apply the functor abstraction to the &lt;code&gt;&amp;amp;&lt;/code&gt; combinator as it sequences one &lt;code&gt;parse()&lt;/code&gt; function after a successful application of a preceding &lt;code&gt;parse()&lt;/code&gt; function. This means that it executes &lt;em&gt;imperatively&lt;/em&gt;. The specific abstraction we have to use for this kind of execution is a &lt;strong&gt;&lt;a href=&quot;https://keywordsalad.com/blog/2022/06/17/imperative-computation/&quot;&gt;monad&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;A monad is a specialization of a functor. We can replace our functor instance of the &lt;code&gt;parse()&lt;/code&gt; function with one for monad:&lt;/p&gt;
 &lt;div class=&quot;numberLines&quot;&gt;
 &lt;div id=&quot;cb25&quot; class=&quot;sourceCode&quot;&gt;
@@ -633,10 +633,10 @@ all tracks.&lt;/p&gt;
 &lt;/ol&gt;</content>
     </entry>
   <entry>
-      <id>https://thisfieldwas.green/blog/2022/06/17/imperative-computation/</id>
+      <id>https://keywordsalad.com/blog/2022/06/17/imperative-computation/</id>
       <title>Imperative Computation in Functional Programming</title>
       <updated>2022-06-17T08:47:11-07:00</updated>
-      <link rel="alternate" href="https://thisfieldwas.green/blog/2022/06/17/imperative-computation/" />
+      <link rel="alternate" href="https://keywordsalad.com/blog/2022/06/17/imperative-computation/" />
       <summary type="html">&lt;div class=&quot;estimated-reading-time&quot;&gt;
 &lt;p&gt;Estimated reading time: &lt;span class=&quot;length&quot;&gt;1h 25m 15s&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -1176,10 +1176,10 @@ are also monads. You’ve probably been using them as such without realizing!&lt
 &lt;p&gt;In my next post, we will explore &lt;strong&gt;raising and recovering from errors&lt;/strong&gt; agnostic of context, so that your code may abstract against typeclasses but still be able to force and recover from &lt;strong&gt;undesired cases&lt;/strong&gt;.&lt;/p&gt;</content>
     </entry>
   <entry>
-      <id>https://thisfieldwas.green/blog/2022/06/16/set-function/</id>
+      <id>https://keywordsalad.com/blog/2022/06/16/set-function/</id>
       <title>The Set Function</title>
       <updated>2022-06-16T22:22:26-07:00</updated>
-      <link rel="alternate" href="https://thisfieldwas.green/blog/2022/06/16/set-function/" />
+      <link rel="alternate" href="https://keywordsalad.com/blog/2022/06/16/set-function/" />
       <summary type="html">&lt;div class=&quot;estimated-reading-time&quot;&gt;
 &lt;p&gt;Estimated reading time: &lt;span class=&quot;length&quot;&gt;15m 31s&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -1317,10 +1317,10 @@ are also monads. You’ve probably been using them as such without realizing!&lt
 &lt;p&gt;This seems like a cool way to model &lt;code&gt;Set&lt;/code&gt;s, but that’s about where the utility stops. As an exercise, it’s fun to see what you can do to model &lt;code&gt;Set&lt;/code&gt;s using functions alone, as this is an excellent vehicle for learning functional composition with combinators. In practice this would produce a &lt;code&gt;Set&lt;/code&gt; with linear-time performance, and you don’t want that.&lt;/p&gt;</content>
     </entry>
   <entry>
-      <id>https://thisfieldwas.green/blog/2022/06/05/enabling-control-flow/</id>
+      <id>https://keywordsalad.com/blog/2022/06/05/enabling-control-flow/</id>
       <title>Enabling Control Flow in Functional Programming</title>
       <updated>2022-06-05T14:01:07-07:00</updated>
-      <link rel="alternate" href="https://thisfieldwas.green/blog/2022/06/05/enabling-control-flow/" />
+      <link rel="alternate" href="https://keywordsalad.com/blog/2022/06/05/enabling-control-flow/" />
       <summary type="html">&lt;div class=&quot;estimated-reading-time&quot;&gt;
 &lt;p&gt;Estimated reading time: &lt;span class=&quot;length&quot;&gt;2h 12m 50s&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -2162,10 +2162,10 @@ and &lt;a href=&quot;https://github.com/keywordsalad/embracing-nondeterminism-co
 &lt;p&gt;In my next post &lt;a href=&quot;/blog/2022/06/17/imperative-computation/&quot; title=&quot;Imperative Computation in Functional Programming&quot;&gt;Imperative Computation in Functional Programming&lt;/a&gt; we will explore the infamous &lt;em&gt;&lt;strong&gt;monad&lt;/strong&gt;&lt;/em&gt; and how it enables imperative control flow in functional programming.&lt;/p&gt;</content>
     </entry>
   <entry>
-      <id>https://thisfieldwas.green/blog/2022/03/15/contexts-and-effects/</id>
+      <id>https://keywordsalad.com/blog/2022/03/15/contexts-and-effects/</id>
       <title>Contexts and Effects in Functional Programming</title>
       <updated>2022-06-05T13:21:27-07:00</updated>
-      <link rel="alternate" href="https://thisfieldwas.green/blog/2022/03/15/contexts-and-effects/" />
+      <link rel="alternate" href="https://keywordsalad.com/blog/2022/03/15/contexts-and-effects/" />
       <summary type="html">&lt;div class=&quot;estimated-reading-time&quot;&gt;
 &lt;p&gt;Estimated reading time: &lt;span class=&quot;length&quot;&gt;1h 49m 41s&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -3001,10 +3001,10 @@ and &lt;a href=&quot;https://github.com/keywordsalad/embracing-nondeterminism-co
 &lt;/section&gt;</content>
     </entry>
   <entry>
-      <id>https://thisfieldwas.green/blog/2022/02/09/persistent-ssh-tunnels/</id>
+      <id>https://keywordsalad.com/blog/2022/02/09/persistent-ssh-tunnels/</id>
       <title>Highly available ssh tunnels</title>
       <updated>2022-02-09T16:02:28-08:00</updated>
-      <link rel="alternate" href="https://thisfieldwas.green/blog/2022/02/09/persistent-ssh-tunnels/" />
+      <link rel="alternate" href="https://keywordsalad.com/blog/2022/02/09/persistent-ssh-tunnels/" />
       <summary type="html">&lt;div class=&quot;estimated-reading-time&quot;&gt;
 &lt;p&gt;Estimated reading time: &lt;span class=&quot;length&quot;&gt;6m 42s&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -3068,12 +3068,12 @@ and &lt;a href=&quot;https://github.com/keywordsalad/embracing-nondeterminism-co
 &lt;p&gt;As an exercise, I want to duct tape my own high availability solution together while still serving my website from my &lt;em&gt;closet computer&lt;/em&gt; as the primary node. It is fun to tell people that my professional site is coming out of the closet, after all.&lt;/p&gt;</content>
     </entry>
   <entry>
-      <id>https://thisfieldwas.green/blog/2021/12/11/reasons-why-my-website-is-offline/</id>
+      <id>https://keywordsalad.com/blog/2021/12/11/reasons-why-my-website-is-offline/</id>
       <title>Reasons why my website is offline</title>
       <updated>2021-12-11T14:43:25-08:00</updated>
-      <link rel="alternate" href="https://thisfieldwas.green/blog/2021/12/11/reasons-why-my-website-is-offline/" />
+      <link rel="alternate" href="https://keywordsalad.com/blog/2021/12/11/reasons-why-my-website-is-offline/" />
       <summary type="html">&lt;div class=&quot;estimated-reading-time&quot;&gt;
-&lt;p&gt;Estimated reading time: &lt;span class=&quot;length&quot;&gt;20m 0s&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Estimated reading time: &lt;span class=&quot;length&quot;&gt;19m 50s&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;My website is hosted from a 2007 HP Pavilion tower that my best friend, Vlad, a privacy buff and &lt;a href=&quot;https://internetwebsite.ofvlad.xyz&quot;&gt;low-key minimalist&lt;/a&gt;, found next to the garbage chute at his condo building.&lt;/p&gt;
 </summary>
@@ -3081,7 +3081,7 @@ and &lt;a href=&quot;https://github.com/keywordsalad/embracing-nondeterminism-co
         <name>Logan McGrath</name>
         </author>
       <content type="html">&lt;div class=&quot;estimated-reading-time&quot;&gt;
-&lt;p&gt;Estimated reading time: &lt;span class=&quot;length&quot;&gt;20m 0s&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Estimated reading time: &lt;span class=&quot;length&quot;&gt;19m 50s&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;My website is hosted from a 2007 HP Pavilion tower that my best friend, Vlad, a privacy buff and &lt;a href=&quot;https://internetwebsite.ofvlad.xyz&quot;&gt;low-key minimalist&lt;/a&gt;, found next to the garbage chute at his condo building.&lt;/p&gt;
 &lt;!--more--&gt;
@@ -3109,7 +3109,7 @@ and &lt;a href=&quot;https://github.com/keywordsalad/embracing-nondeterminism-co
 &lt;p&gt;The computer sits in many pieces in my living room as I remove dust and await several shipments of spinning platter drives. Installing the array of drives to hold my media proves difficult: HP did not make this case amenable to changes or even provide much in the way of expansion bays. As a consequence, I now have a bunch of drives that are free-floating within the case. No matter though, the drives are each &lt;code&gt;4TB&lt;/code&gt;, and so heavy that they are held in place by the friction induced by their own mass and density alone. Later, for a short period, the computer carries the hostname &lt;code&gt;gravwell&lt;/code&gt; because of the density these drives give it.&lt;/p&gt;
 &lt;p&gt;I craft a script so that I can reproducibly install Arch Linux with disk encryption over &lt;code&gt;ssh&lt;/code&gt;, comfortably iterating from my 2019 MacBook Pro until the installation looks correct. I nuke the computer and try again, just to be sure. Then several times more.&lt;/p&gt;
 &lt;p&gt;Once the OS is installed to satisfaction, I carefully arrange the drives within the case, making sure the case can tolerate some degrees of tilt in any direction without the drives sliding out of place. To my surprise, the computer can be rotated a full 90° in any direction, and the drives don’t move &lt;em&gt;at all&lt;/em&gt;. I place the computer inside of the bedroom closet, where I can plug it directly into the router. The computer is now &lt;em&gt;closet computer&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;I spend some number of days iterating on &lt;em&gt;closet computer&lt;/em&gt; with an &lt;a href=&quot;https://bitsof.thisfieldwas.green/keywordsalad/ansibled/src/commit/2f8b5c99c51adeb2226d2e9e51cead6766448559/servers.yml#L1-L23&quot;&gt;Ansible playbook&lt;/a&gt; to get the configuration just right. As long as the data array remains intact, I can incrementally add new disks to it by appending the disks to the playbook configuration. If the data array is lost, then I can nuke it and build anew just by running the playbook. &lt;em&gt;(To be clear, I lose data if this happens.)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I spend some number of days iterating on &lt;em&gt;closet computer&lt;/em&gt; with an &lt;del&gt;&lt;a href=&quot;#&quot;&gt;Ansible playbook&lt;/a&gt;&lt;/del&gt; to get the configuration just right. As long as the data array remains intact, I can incrementally add new disks to it by appending the disks to the playbook configuration. If the data array is lost, then I can nuke it and build anew just by running the playbook. &lt;em&gt;(To be clear, I lose data if this happens.)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;My goal with this playbook is primarily to retain a living snapshot of &lt;em&gt;closet computer&lt;/em&gt;’s configuration. A secondary goal is to be able to provision a replacement system if the computer should ever cease to work. In my head I imagine the happy path for such an event looks like this:&lt;/p&gt;
 &lt;ol type=&quot;1&quot;&gt;
 &lt;li&gt;A few keystrokes.&lt;/li&gt;
@@ -3199,7 +3199,7 @@ Cables and all, the &lt;em&gt;closet computer&lt;/em&gt; in context. Corey asked
 &lt;p&gt;I still use GitHub professionally, and for open source projects hosted there. I realize that being a principled curmudgeon sometimes means that I’m only that. Obviously there also exists a sort of cognitive dissonance in regards to contributing to open source works in the context of labor. Regardless, I gave myself a learning opportunity, and I consequently don’t use GitHub as a personal consumer now. I suppose that was my goal after all.&lt;/p&gt;
 &lt;p&gt;I might give Copilot a go soon. I’m reading some good things about how it cuts through boilerplate like a hot knife through butter. Reviews such as this help me conceptualize how it might fit into my own workflow, and that its role is more augmentation than replacement. Especially now that I’ve had time to step back. I would be over the moon to have an intelligent assist for the boring parts of my job. I suppose that was GitHub’s goal, too.&lt;/p&gt;
 &lt;p&gt;On the lighter side, being professionally out and telling people that my website is coming out of the closet gives me a certain subversive glee that I never realized I needed. It’s a great lead into how the computer got there, too.&lt;/p&gt;
-&lt;p&gt;For now, I host my source code at &lt;a href=&quot;https://bitsof.thisfieldwas.green&quot;&gt;bitsof.thisfieldwas.green&lt;/a&gt;. My website source repository is directly accessible from &lt;a href=&quot;https://bitsof.thisfieldwas.green/keywordsalad/thisfieldwas.green&quot;&gt;keywordsalad/thisfieldwas.green&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;For now, I host my source code at &lt;a href=&quot;#&quot;&gt;bitsof.thisfieldwas.green&lt;/a&gt;. My website source repository is directly accessible from &lt;a href=&quot;#&quot;&gt;keywordsalad/thisfieldwas.green&lt;/a&gt;.&lt;/del&gt;&lt;/p&gt;
 &lt;section id=&quot;footnotes&quot; class=&quot;footnotes footnotes-end-of-document&quot; role=&quot;doc-endnotes&quot;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
@@ -3211,10 +3211,10 @@ Cables and all, the &lt;em&gt;closet computer&lt;/em&gt; in context. Corey asked
 &lt;/section&gt;</content>
     </entry>
   <entry>
-      <id>https://thisfieldwas.green/blog/2021/12/05/redoing-my-website/</id>
+      <id>https://keywordsalad.com/blog/2021/12/05/redoing-my-website/</id>
       <title>Redoing my website with Haskell and Hakyll</title>
       <updated>2021-12-05T08:08:32-08:00</updated>
-      <link rel="alternate" href="https://thisfieldwas.green/blog/2021/12/05/redoing-my-website/" />
+      <link rel="alternate" href="https://keywordsalad.com/blog/2021/12/05/redoing-my-website/" />
       <summary type="html">&lt;div class=&quot;estimated-reading-time&quot;&gt;
 &lt;p&gt;Estimated reading time: &lt;span class=&quot;length&quot;&gt;19m 56s&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -3372,10 +3372,10 @@ Cables and all, the &lt;em&gt;closet computer&lt;/em&gt; in context. Corey asked
 &lt;p&gt;I’m really happy with &lt;code&gt;hakyll&lt;/code&gt;! I’m also really happy with Haskell. My website is taking some investment, but it’s been worth the effort especially given the quality of the output. I think I’m going to keep this setup for a while yet.&lt;/p&gt;</content>
     </entry>
   <entry>
-      <id>https://thisfieldwas.green/blog/2012/11/28/promoting-changes-with-app-config-app/</id>
+      <id>https://keywordsalad.com/blog/2012/11/28/promoting-changes-with-app-config-app/</id>
       <title>Promoting changes with App-Config-App</title>
       <updated>2012-11-28T13:04:00-06:00</updated>
-      <link rel="alternate" href="https://thisfieldwas.green/blog/2012/11/28/promoting-changes-with-app-config-app/" />
+      <link rel="alternate" href="https://keywordsalad.com/blog/2012/11/28/promoting-changes-with-app-config-app/" />
       <summary type="html">&lt;div class=&quot;estimated-reading-time&quot;&gt;
 &lt;p&gt;Estimated reading time: &lt;span class=&quot;length&quot;&gt;6m 14s&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -3537,10 +3537,10 @@ remain unchanged) but the application doesn’t report any errors when this
 happens.&lt;/p&gt;</content>
     </entry>
   <entry>
-      <id>https://thisfieldwas.green/blog/2012/11/20/app-config-app-in-action/</id>
+      <id>https://keywordsalad.com/blog/2012/11/20/app-config-app-in-action/</id>
       <title>App-Config-App in Action</title>
       <updated>2012-11-20T17:00:00-06:00</updated>
-      <link rel="alternate" href="https://thisfieldwas.green/blog/2012/11/20/app-config-app-in-action/" />
+      <link rel="alternate" href="https://keywordsalad.com/blog/2012/11/20/app-config-app-in-action/" />
       <summary type="html">&lt;div class=&quot;estimated-reading-time&quot;&gt;
 &lt;p&gt;Estimated reading time: &lt;span class=&quot;length&quot;&gt;1m 5s&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -3579,10 +3579,10 @@ the Server-Side Piano.&lt;/p&gt;
 Additional details may be found in the application’s &lt;a href=&quot;https://github.com/lmcgrath/angular-java-server-midi/blob/master/README.markdown&quot;&gt;README&lt;/a&gt;.&lt;/p&gt;</content>
     </entry>
   <entry>
-      <id>https://thisfieldwas.green/blog/2012/11/16/scm-backed-application-configuration-with-perforce/</id>
+      <id>https://keywordsalad.com/blog/2012/11/16/scm-backed-application-configuration-with-perforce/</id>
       <title>SCM-Backed Application Configuration with Perforce</title>
       <updated>2012-11-16T17:00:00-06:00</updated>
-      <link rel="alternate" href="https://thisfieldwas.green/blog/2012/11/16/scm-backed-application-configuration-with-perforce/" />
+      <link rel="alternate" href="https://keywordsalad.com/blog/2012/11/16/scm-backed-application-configuration-with-perforce/" />
       <summary type="html">&lt;div class=&quot;estimated-reading-time&quot;&gt;
 &lt;p&gt;Estimated reading time: &lt;span class=&quot;length&quot;&gt;8m 31s&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -3769,10 +3769,10 @@ existing infrastructure.&lt;/p&gt;
 per-branch permissions.&lt;/p&gt;</content>
     </entry>
   <entry>
-      <id>https://thisfieldwas.green/blog/2012/11/07/using-perforce-chronicle-for-application-configuration/</id>
+      <id>https://keywordsalad.com/blog/2012/11/07/using-perforce-chronicle-for-application-configuration/</id>
       <title>Using Perforce Chronicle for application configuration</title>
       <updated>2012-11-07T13:54:00-06:00</updated>
-      <link rel="alternate" href="https://thisfieldwas.green/blog/2012/11/07/using-perforce-chronicle-for-application-configuration/" />
+      <link rel="alternate" href="https://keywordsalad.com/blog/2012/11/07/using-perforce-chronicle-for-application-configuration/" />
       <summary type="html">&lt;div class=&quot;estimated-reading-time&quot;&gt;
 &lt;p&gt;Estimated reading time: &lt;span class=&quot;length&quot;&gt;43m 28s&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;

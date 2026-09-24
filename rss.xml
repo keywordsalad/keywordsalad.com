@@ -5,18 +5,18 @@
 <channel>
   <title>This Field Was Green</title>
   <description>I keep my field green by writing about tech and sometimes life.</description>
-  <link>https://thisfieldwas.green</link>
-  <atom:link href="https://thisfieldwas.green/rss.xml" rel="self" type="application/rss+xml" />
+  <link>https://keywordsalad.com</link>
+  <atom:link href="https://keywordsalad.com/rss.xml" rel="self" type="application/rss+xml" />
   <image>
-    <url>https://thisfieldwas.green/images/grass-256x256.png</url>
+    <url>https://keywordsalad.com/images/grass-256x256.png</url>
     <title>This Field Was Green</title>
-    <link>https://thisfieldwas.green</link>
+    <link>https://keywordsalad.com</link>
   </image>
   <category>Technology</category>
   <category>Software Engineering</category>
   <language>en-US</language>
-  <managingEditor>logan.mcgrath@thisfieldwas.green (Logan McGrath)</managingEditor>
-  <webMaster>logan.mcgrath@thisfieldwas.green (Logan McGrath)</webMaster>
+  <managingEditor>logan.mcgrath@keywordsalad.com (Logan McGrath)</managingEditor>
+  <webMaster>logan.mcgrath@keywordsalad.com (Logan McGrath)</webMaster>
   <pubDate>Tue, 14 Jul 2026 21:56:10 -0400</pubDate>
   <lastBuildDate>Tue, 14 Jul 2026 21:56:10 -0400</lastBuildDate>
   <generator>Hakyll</generator>
@@ -25,8 +25,8 @@
       <title>Reasons why I love Claude 💅</title>
       <description>I spent years as a principled curmudgeon about AI. Then Claude cast a season of Love Island starring programming languages, and reader, I folded.</description>
       <dc:creator>Logan McGrath</dc:creator>
-      <link>https://thisfieldwas.green/blog/2026/07/14/reasons-why-i-love-claude/</link>
-      <guid>https://thisfieldwas.green/blog/2026/07/14/reasons-why-i-love-claude/</guid>
+      <link>https://keywordsalad.com/blog/2026/07/14/reasons-why-i-love-claude/</link>
+      <guid>https://keywordsalad.com/blog/2026/07/14/reasons-why-i-love-claude/</guid>
       <pubDate>Tue, 14 Jul 2026 21:56:10 -0400</pubDate>
       <category>ai</category>
       <category>claude</category>
@@ -40,8 +40,8 @@
       <title>Parser Combinators</title>
       <description>Combining functions to build a parser</description>
       <dc:creator>Logan McGrath</dc:creator>
-      <link>https://thisfieldwas.green/blog/2022/09/05/parser-combinators/</link>
-      <guid>https://thisfieldwas.green/blog/2022/09/05/parser-combinators/</guid>
+      <link>https://keywordsalad.com/blog/2022/09/05/parser-combinators/</link>
+      <guid>https://keywordsalad.com/blog/2022/09/05/parser-combinators/</guid>
       <pubDate>Mon, 05 Sep 2022 12:55:18 -0700</pubDate>
       <category>functional programming</category>
       <category>programming</category>
@@ -54,8 +54,8 @@
       <title>Imperative Computation in Functional Programming</title>
       <description>Leveraging the case of the previous effect to indicate whether computation of the next effect should proceed.</description>
       <dc:creator>Logan McGrath</dc:creator>
-      <link>https://thisfieldwas.green/blog/2022/06/17/imperative-computation/</link>
-      <guid>https://thisfieldwas.green/blog/2022/06/17/imperative-computation/</guid>
+      <link>https://keywordsalad.com/blog/2022/06/17/imperative-computation/</link>
+      <guid>https://keywordsalad.com/blog/2022/06/17/imperative-computation/</guid>
       <pubDate>Fri, 17 Jun 2022 08:47:11 -0700</pubDate>
       <category>functional programming</category>
       <category>programming</category>
@@ -67,8 +67,8 @@
       <title>The Set Function</title>
       <description>Modeling a mathematical set as a function.</description>
       <dc:creator>Logan McGrath</dc:creator>
-      <link>https://thisfieldwas.green/blog/2022/06/16/set-function/</link>
-      <guid>https://thisfieldwas.green/blog/2022/06/16/set-function/</guid>
+      <link>https://keywordsalad.com/blog/2022/06/16/set-function/</link>
+      <guid>https://keywordsalad.com/blog/2022/06/16/set-function/</guid>
       <pubDate>Thu, 16 Jun 2022 22:22:26 -0700</pubDate>
       <category>functional programming</category>
       <category>programming</category>
@@ -80,8 +80,8 @@
       <title>Enabling Control Flow in Functional Programming</title>
       <description>Leveraging the effects of two or more contexts to allow computations to proceed or halt.</description>
       <dc:creator>Logan McGrath</dc:creator>
-      <link>https://thisfieldwas.green/blog/2022/06/05/enabling-control-flow/</link>
-      <guid>https://thisfieldwas.green/blog/2022/06/05/enabling-control-flow/</guid>
+      <link>https://keywordsalad.com/blog/2022/06/05/enabling-control-flow/</link>
+      <guid>https://keywordsalad.com/blog/2022/06/05/enabling-control-flow/</guid>
       <pubDate>Sun, 05 Jun 2022 14:01:07 -0700</pubDate>
       <category>functional programming</category>
       <category>programming</category>
@@ -93,8 +93,8 @@
       <title>Contexts and Effects in Functional Programming</title>
       <description>Ever wonder what the purpose of that map() method was on so many objects?</description>
       <dc:creator>Logan McGrath</dc:creator>
-      <link>https://thisfieldwas.green/blog/2022/03/15/contexts-and-effects/</link>
-      <guid>https://thisfieldwas.green/blog/2022/03/15/contexts-and-effects/</guid>
+      <link>https://keywordsalad.com/blog/2022/03/15/contexts-and-effects/</link>
+      <guid>https://keywordsalad.com/blog/2022/03/15/contexts-and-effects/</guid>
       <pubDate>Tue, 15 Mar 2022 09:20:00 -0700</pubDate>
       <category>functional programming</category>
       <category>programming</category>
@@ -106,8 +106,8 @@
       <title>Highly available ssh tunnels</title>
       <description>Duct tape performs better than systemd for keeping my webserver&#39;s ssh tunnels open</description>
       <dc:creator>Logan McGrath</dc:creator>
-      <link>https://thisfieldwas.green/blog/2022/02/09/persistent-ssh-tunnels/</link>
-      <guid>https://thisfieldwas.green/blog/2022/02/09/persistent-ssh-tunnels/</guid>
+      <link>https://keywordsalad.com/blog/2022/02/09/persistent-ssh-tunnels/</link>
+      <guid>https://keywordsalad.com/blog/2022/02/09/persistent-ssh-tunnels/</guid>
       <pubDate>Wed, 09 Feb 2022 16:02:28 -0800</pubDate>
       <category>self host</category>
       <category>duct tape</category>
@@ -117,8 +117,8 @@
       <title>Reasons why my website is offline</title>
       <description>My website comes out of the closet. This is from where I host several of my services, but the uptime is terrible!</description>
       <dc:creator>Logan McGrath</dc:creator>
-      <link>https://thisfieldwas.green/blog/2021/12/11/reasons-why-my-website-is-offline/</link>
-      <guid>https://thisfieldwas.green/blog/2021/12/11/reasons-why-my-website-is-offline/</guid>
+      <link>https://keywordsalad.com/blog/2021/12/11/reasons-why-my-website-is-offline/</link>
+      <guid>https://keywordsalad.com/blog/2021/12/11/reasons-why-my-website-is-offline/</guid>
       <pubDate>Sat, 11 Dec 2021 14:43:25 -0800</pubDate>
       <category>self host</category>
       <category>configuration management</category>
@@ -130,8 +130,8 @@
       <title>Redoing my website with Haskell and Hakyll</title>
       <description>My website prior to 2021 was authored using octopress or jekyll. Truthfully I don&#39;t remember which as I haven&#39;t touched my website in quite a few years. I want to update my homepage and I&#39;m in a bind because I don&#39;t know how to produce a build after I make changes.</description>
       <dc:creator>Logan McGrath</dc:creator>
-      <link>https://thisfieldwas.green/blog/2021/12/05/redoing-my-website/</link>
-      <guid>https://thisfieldwas.green/blog/2021/12/05/redoing-my-website/</guid>
+      <link>https://keywordsalad.com/blog/2021/12/05/redoing-my-website/</link>
+      <guid>https://keywordsalad.com/blog/2021/12/05/redoing-my-website/</guid>
       <pubDate>Sun, 05 Dec 2021 08:08:32 -0800</pubDate>
       <category>hakyll</category>
       <category>haskell</category>
@@ -142,8 +142,8 @@
       <title>Promoting changes with App-Config-App</title>
       <description>The App-Config-App now lets you promote changes between environments!</description>
       <dc:creator>Logan McGrath</dc:creator>
-      <link>https://thisfieldwas.green/blog/2012/11/28/promoting-changes-with-app-config-app/</link>
-      <guid>https://thisfieldwas.green/blog/2012/11/28/promoting-changes-with-app-config-app/</guid>
+      <link>https://keywordsalad.com/blog/2012/11/28/promoting-changes-with-app-config-app/</link>
+      <guid>https://keywordsalad.com/blog/2012/11/28/promoting-changes-with-app-config-app/</guid>
       <pubDate>Wed, 28 Nov 2012 13:04:00 -0600</pubDate>
       <category>angularjs</category>
       <category>perforce</category>
@@ -154,8 +154,8 @@
       <title>App-Config-App in Action</title>
       <description>Paul Hammant found this cool Server-Side Piano and I&#39;ve modified it to be configurable from a running App-Config-App. Because the sound is generated at the server, you&#39;re able to see (hear) the Server-Side Piano change its configuration without reloading the UI.</description>
       <dc:creator>Logan McGrath</dc:creator>
-      <link>https://thisfieldwas.green/blog/2012/11/20/app-config-app-in-action/</link>
-      <guid>https://thisfieldwas.green/blog/2012/11/20/app-config-app-in-action/</guid>
+      <link>https://keywordsalad.com/blog/2012/11/20/app-config-app-in-action/</link>
+      <guid>https://keywordsalad.com/blog/2012/11/20/app-config-app-in-action/</guid>
       <pubDate>Tue, 20 Nov 2012 17:00:00 -0600</pubDate>
       <category>angularjs</category>
       <category>perforce</category>
@@ -166,8 +166,8 @@
       <title>SCM-Backed Application Configuration with Perforce</title>
       <description>Continuing from my last post, I&#39;ve forked Paul Hammant&#39;s original App-Config-App and modified it to work against Perforce. I&#39;ve decided not to continue using Perforce Chronicle as it is primarily intended for content management.</description>
       <dc:creator>Logan McGrath</dc:creator>
-      <link>https://thisfieldwas.green/blog/2012/11/16/scm-backed-application-configuration-with-perforce/</link>
-      <guid>https://thisfieldwas.green/blog/2012/11/16/scm-backed-application-configuration-with-perforce/</guid>
+      <link>https://keywordsalad.com/blog/2012/11/16/scm-backed-application-configuration-with-perforce/</link>
+      <guid>https://keywordsalad.com/blog/2012/11/16/scm-backed-application-configuration-with-perforce/</guid>
       <pubDate>Fri, 16 Nov 2012 17:00:00 -0600</pubDate>
       <category>configuration management</category>
       <category>perforce</category>
@@ -178,8 +178,8 @@
       <title>Using Perforce Chronicle for application configuration</title>
       <description>Following Paul Hammant&#39;s post App-config workflow using SCM and subsequent proof of concept backed by Git, I will show that an app-config application backed by Perforce is possible using Perforce Chronicle.</description>
       <dc:creator>Logan McGrath</dc:creator>
-      <link>https://thisfieldwas.green/blog/2012/11/07/using-perforce-chronicle-for-application-configuration/</link>
-      <guid>https://thisfieldwas.green/blog/2012/11/07/using-perforce-chronicle-for-application-configuration/</guid>
+      <link>https://keywordsalad.com/blog/2012/11/07/using-perforce-chronicle-for-application-configuration/</link>
+      <guid>https://keywordsalad.com/blog/2012/11/07/using-perforce-chronicle-for-application-configuration/</guid>
       <pubDate>Wed, 07 Nov 2012 13:54:00 -0600</pubDate>
       <category>perforce</category>
       <category>configuration management</category>

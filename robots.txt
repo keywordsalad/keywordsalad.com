@@ -2,7 +2,7 @@
 User-agent: *
 Disallow: /drafts
 Disallow: /drafts/*
-Sitemap: https://thisfieldwas.green/sitemap.xml
+Sitemap: https://keywordsalad.com/sitemap.xml
 
 User-agent: CCBot
 Disallow: /
