@@ -63,7 +63,7 @@ I craft a script so that I can reproducibly install Arch Linux with disk encrypt
 
 Once the OS is installed to satisfaction, I carefully arrange the drives within the case, making sure the case can tolerate some degrees of tilt in any direction without the drives sliding out of place. To my surprise, the computer can be rotated a full 90&deg; in any direction, and the drives don't move _at all_. I place the computer inside of the bedroom closet, where I can plug it directly into the router. The computer is now _closet computer_.
 
-I spend some number of days iterating on _closet computer_ with an [Ansible playbook](https://bitsof.thisfieldwas.green/keywordsalad/ansibled/src/commit/2f8b5c99c51adeb2226d2e9e51cead6766448559/servers.yml#L1-L23) to get the configuration just right. As long as the data array remains intact, I can incrementally add new disks to it by appending the disks to the playbook configuration. If the data array is lost, then I can nuke it and build anew just by running the playbook. _(To be clear, I lose data if this happens.)_
+I spend some number of days iterating on _closet computer_ with an ~~[Ansible playbook](#)~~ to get the configuration just right. As long as the data array remains intact, I can incrementally add new disks to it by appending the disks to the playbook configuration. If the data array is lost, then I can nuke it and build anew just by running the playbook. _(To be clear, I lose data if this happens.)_
 
 My goal with this playbook is primarily to retain a living snapshot of _closet computer_'s configuration. A secondary goal is to be able to provision a replacement system if the computer should ever cease to work. In my head I imagine the happy path for such an event looks like this:
 
@@ -168,7 +168,7 @@ I might give Copilot a go soon. I'm reading some good things about how it cuts t
 
 On the lighter side, being professionally out and telling people that my website is coming out of the closet gives me a certain subversive glee that I never realized I needed. It's a great lead into how the computer got there, too.
 
-For now, I host my source code at [bitsof.thisfieldwas.green](https://bitsof.thisfieldwas.green). My website source repository is directly accessible from [keywordsalad/thisfieldwas.green](https://bitsof.thisfieldwas.green/keywordsalad/thisfieldwas.green).
+~~For now, I host my source code at [bitsof.thisfieldwas.green](#). My website source repository is directly accessible from [keywordsalad/thisfieldwas.green](#).~~
 
 [^archbtw]: Meme reference: [btw i use arch](https://knowyourmeme.com/memes/btw-i-use-arch) -- When Vlad proofread this post, he informed me that it was customary to let the reader know that one uses Arch, btw.
 

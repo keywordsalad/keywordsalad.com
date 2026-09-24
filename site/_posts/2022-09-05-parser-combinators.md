@@ -630,5 +630,5 @@ With parser combinators you are able to process text into any structure you need
 2. Stateful parsing, which requires lifting the `parse()` function into a higher-order monad.
 
 [`cats`]: https://typelevel.org/cats/
-[monad]: https://thisfieldwas.green/blog/2022/06/17/imperative-computation/
+[monad]: https://keywordsalad.com/blog/2022/06/17/imperative-computation/
 [monadic recursion]: https://typelevel.org/cats/typeclasses/monad.html#tailrecm

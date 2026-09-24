@@ -3,20 +3,20 @@ default: &default
     title: This Field Was Green
     description: I keep my field green by writing about tech and sometimes life.
     host: http://localhost:8000
-    root: ''
+    root: ""
     author-name: Logan McGrath
-    author-email: logan.mcgrath@thisfieldwas.green
+    author-email: logan.mcgrath@keywordsalad.com
     linkedin-profile: https://www.linkedin.com/in/loganmcgrath
     github-profile: https://github.com/keywordsalad
-    github-web-url: https://github.com/keywordsalad/thisfieldwas.green
+    github-web-url: https://github.com/keywordsalad/keywordsalad.com
     mastodon-profile: https://tech.lgbt/@armed_banana
 
   display-formats:
-    date-short-format: '%B %e, %Y'
-    date-long-format: '%B %e, %Y %l:%M %P %EZ'
-    time-format: '%l:%M %p %EZ'
-    robot-date: '%Y-%m-%d'
-    robot-time: '%Y-%m-%dT%H:%M:%S%Ez'
+    date-short-format: "%B %e, %Y"
+    date-long-format: "%B %e, %Y %l:%M %P %EZ"
+    time-format: "%l:%M %p %EZ"
+    robot-date: "%Y-%m-%d"
+    robot-time: "%Y-%m-%dT%H:%M:%S%Ez"
     image-widths: [320, 768, 1024, 1920, 3840]
 
   hakyll-config:
@@ -35,7 +35,7 @@ prod:
     inflate-css: false
   site-info:
     <<: *default-site-info
-    host: https://thisfieldwas.green
+    host: https://keywordsalad.com
 
 review:
   <<: *default
@@ -44,7 +44,7 @@ review:
     inflate-css: false
   site-info:
     <<: *default-site-info
-    host: https://review.thisfieldwas.green
+    host: https://review.keywordsalad.com
 
 preview:
   <<: *default
@@ -53,4 +53,4 @@ preview:
     inflate-css: false
   site-info:
     <<: *default-site-info
-    host: https://preview.thisfieldwas.green
+    host: https://preview.keywordsalad.com

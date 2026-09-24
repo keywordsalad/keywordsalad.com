@@ -4,8 +4,8 @@ Guidance for AI agents and contributors working in this repository.
 
 ## Overview
 
-`thisfieldwas.green` is Logan McGrath's personal website — a blog published at
-<https://thisfieldwas.green>. It is a **custom static site generator written in
+`keywordsalad.com` is Logan McGrath's personal website — a blog published at
+<https://keywordsalad.com>. It is a **custom static site generator written in
 Haskell on top of [Hakyll](https://jaspervdj.be/hakyll/)** (package name:
 `green`). Site content and assets live in `site/`, the generator compiles them
 into `_site/`, and publishing pushes that output to a dedicated git branch.
@@ -41,22 +41,22 @@ the site generator (`site`).
 Everything goes through `./go <subcommand>`. Run `./go` with no argument for the
 generated help listing.
 
-| Command              | What it does                                                           |
-| -------------------- | ---------------------------------------------------------------------- |
-| `./go build`         | `stack build`, then `stack exec site build`, then regenerate favicons  |
-| `./go watch`         | Build, then run the Hakyll preview server on <http://localhost:8000>   |
-| `./go rewatch`       | `rebuild`, then run the preview server                                 |
-| `./go rebuild`       | `clean` then `build`                                                   |
-| `./go rebuild_all`   | `clean_all` then `build`                                               |
-| `./go clean`         | Remove `_cache/*` and `_site/*`                                        |
-| `./go clean_all`     | `clean` + `stack clean`                                                |
-| `./go prebake`       | Pre-compile dependencies only (`stack build/test --only-dependencies`) |
-| `./go test`          | Run the Hspec test suite (`stack test`)                                |
-| `./go kill`          | Kill a runaway preview server holding TCP port 8000                    |
-| `./go datestamp`     | Print + copy an ISO-8601 timestamp (handy for frontmatter `date`)      |
-| `./go favicons`      | Generate favicons / og:image from `site/images/grass.svg`              |
-| `./go publish`       | Build with `SITE_ENV=prod` and publish (main-only — see **Deploy**)    |
-| `./go preview`       | Build with `SITE_ENV=preview` and rsync to the preview host            |
+| Command            | What it does                                                           |
+| ------------------ | ---------------------------------------------------------------------- |
+| `./go build`       | `stack build`, then `stack exec site build`, then regenerate favicons  |
+| `./go watch`       | Build, then run the Hakyll preview server on <http://localhost:8000>   |
+| `./go rewatch`     | `rebuild`, then run the preview server                                 |
+| `./go rebuild`     | `clean` then `build`                                                   |
+| `./go rebuild_all` | `clean_all` then `build`                                               |
+| `./go clean`       | Remove `_cache/*` and `_site/*`                                        |
+| `./go clean_all`   | `clean` + `stack clean`                                                |
+| `./go prebake`     | Pre-compile dependencies only (`stack build/test --only-dependencies`) |
+| `./go test`        | Run the Hspec test suite (`stack test`)                                |
+| `./go kill`        | Kill a runaway preview server holding TCP port 8000                    |
+| `./go datestamp`   | Print + copy an ISO-8601 timestamp (handy for frontmatter `date`)      |
+| `./go favicons`    | Generate favicons / og:image from `site/images/grass.svg`              |
+| `./go publish`     | Build with `SITE_ENV=prod` and publish (main-only — see **Deploy**)    |
+| `./go preview`     | Build with `SITE_ENV=preview` and rsync to the preview host            |
 
 If you'd rather bypass `./go`, the underlying commands are plain Stack:
 
@@ -247,11 +247,11 @@ There is **no CI/CD** — deployment is manual via `./go`.
   in sync with `origin/main`, fetches the `_site` branch into `./_site`, rebuilds
   with `SITE_ENV=prod`, commits the generated output onto the **`_site` git
   branch**, pushes it, and pushes an annotated `publish_YYYY.MM.DD_HH.MM.SS_<sha>`
-  tag. (The final `rsync … bastion.thisfieldwas.green` line is currently
+  tag. (The final `rsync … bastion.keywordsalad.com` line is currently
   commented out — publishing = pushing built output to the `_site` branch.)
 - **`./go preview`** — rebuild with `SITE_ENV=preview`, rsync to the preview host.
 
-The published domain is pinned by `site/CNAME` (`thisfieldwas.green`).
+The published domain is pinned by `site/CNAME` (`keywordsalad.com`).
 
 ## Code conventions
 

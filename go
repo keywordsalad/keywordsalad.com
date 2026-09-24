@@ -117,14 +117,14 @@ _verify-prerequisites () {
   git tag -a "$tag" -m "Build on $(date) generated from $sha"
   git push origin "$tag"
 
-  #rsync -ahp * bastion.thisfieldwas.green:/var/www/thisfieldwas.green/
+  #rsync -ahp * bastion.keywordsalad.com:/var/www/keywordsalad.com/
   popd
 }
 
 ⚡preview () {
   _help-line "Build the site and publish a preview build"
   SITE_ENV=preview ⚡rebuild
-  rsync -ahp _site/* closet.thisfieldwas.green:/usr/share/nginx/preview.thisfieldwas.green/_site/
+  rsync -ahp _site/* closet.keywordsalad.com:/usr/share/nginx/preview.keywordsalad.com/_site/
 }
 
 ⚡test_sync () {
